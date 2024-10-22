@@ -1,7 +1,7 @@
 #include <stdio.h>
 #pragma pack(push,1)
-
-struct __attribute__((packed, aligned(1))) Aircraft
+//This is changed file, lets see if it reflects in main after I merge both
+struct Aircraft
 {
 	char Model[20];
 	int VIN;
