@@ -1,0 +1,13 @@
+TCP is a connection oriented protocol which makes use of a three way handshake in order to establish connection between devices. It offers acknowledgement and flow control. It also has error correction techniques which makes it lucrative to applications which demand accurate and relaible transfer of data.Applications include: Email, HTTP, SMTP, WWW etc.
+
+UDP on the other hand is a connection less and un-relaible protocol which is used in applications where some data loss is tolerable but there should be no compromise on latency. It has checksum as error correction only and does not offer any other service to ensure relaible transfer. There is no retransmission for lost packets as there is no tracking of data. Applications include: VoIP, Real-time streaming media, Video Calls, Video Games etc. 
+
+All this is enclosed in the TCP/IP Model for data transfer between devices over the internet. The model breaks the data into packets at senders side, which are then again reassembled when the data reaches destination. It breaks data into four layers, namely: (1) Network (2) Internet (3) Transport (4) Application. On the reciever side,data travels Application -> Network, whereas on destination side, data travels Network -> Application.
+
+(1) Network Access Layer = this layers is responsible for all the networking shiz like requestion connections, contains information about the network protocol used by the data. Can be Ethernet IEEE 802 or PPP (Point to Point Protocol).
+
+(2) Internet Layer = defines the protocols which are responsible for the transmission of data over the network, main protocols residing at the layer are IP, ARP & ICMP (Internet Control Message Protocol). This layer is responsible for routing packets of data from one device to another across a network, and it does this by assigning a unique IP address to that device on the network which is in turn used to recognize a device over that device on the network and calculate best routes to that device. It makes use of routing tables to achieve this. ARP can be used to determine physical address from an IP address. 
+
+(3) Transport Layer = also called Host-to-Host layer, these protocols exchange data receipt acknowledgements and restransmit any missing data if there's any. Two protocols used in this layer are TCP & UDP. UDP preferred for transfer of little amount of data.
+
+(4) Application Layer = keeps data away from complex protocols and presents it in a meaningful way to user, examples are HTTP/HTTPS, SSH etc.  

@@ -1,6 +1,7 @@
 #include <stdio.h>
+#pragma pack(push,1)
 
-struct Aircraft(__attribute_pa)
+struct __attribute__((packed, aligned(1))) Aircraft
 {
 	char Model[20];
 	int VIN;
@@ -8,6 +9,8 @@ struct Aircraft(__attribute_pa)
 	int MTOW;
 	char Make[10];
 };
+
+#pragma pack(pop)
 
 struct Boat
 {
