@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void product(int a[][2], int b[][2], int c[][2])
+void product(int a[2][2], int b[2][2], int c[2][2])
 {
 	for (int i=0;i<2;i++)
 	{
@@ -13,9 +13,12 @@ void product(int a[][2], int b[][2], int c[][2])
 
 int main()
 {
-	int a[2][2] = {{1,2},{3,4}};
-	int b[2][2] = {{5,6},{7,8}};
-	int prod[2][2];
-	product(prod,a,b);
-	printf("%d\t%d\n%d\t%d\n",prod[0][0],prod[0][1],prod[1][0],prod[1][1]);
+	int a[2][2], b[2][2],c[2][2];
+	printf("Enter elements of first matrix: ");
+	scanf("%d,%d,%d,%d",&a[0][0],&a[0][1],&a[1][0],&a[1][1]);
+	printf("Enter elements of second matrix: ");
+	scanf("%d,%d,%d,%d",&b[0][0],&b[0][1],&b[1][0],&b[1][1]);
+	product(c,a,b);
+	printf("\n%d\t%d\n%d\t%d\n",c[0][0],c[0][1],c[1][0],c[1][1]);
+	return 0;
 }

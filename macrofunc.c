@@ -1,11 +1,15 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-#define PI	3.142
-#define AREA(x)	PI*x*x
+#define IFSMALL(n)	((n) >= 'A' && (n) <= 'Z')
 
 int main()
 {
-	int a = 3;
-	float answer = AREA(a);
-	printf("%0.2f\n",answer);
-}
+	char c = 'C';
+	bool ans = IFSMALL(c);
+	if (ans)
+		printf("Upper case!\n");
+	else 
+		printf("Lower Case!\n");
+	return 0;
+}	
